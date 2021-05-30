@@ -216,6 +216,29 @@ class WebServer {
 
           // TODO: Include error handling here with a correct error code and
           // a response that makes sense
+          
+           if(args.length < 2) {
+              System.out.prinln("ERROR 400 - Bad Request.");
+              System.out.println("To complete this request, two integers must be provided."
+                                 + " Please review your submission and try again.");
+              System.exit(0);
+           }
+              
+           //if(num1 == null || num2 == null){
+           //     System.out.prinln("ERROR 400 - Bad Request.");
+           //     System.out.println("To complete this request, two integers must be provided."
+           //                       + " Please review your submission and try again.");
+           //     System.exit(0);
+           
+           //try {
+           //   // statement
+           //   System.out.println("To complete this request, two integers must be provided."
+           //                      + " Please review your submission and try again.")
+           //}
+           //catch (Exception e) {
+           //   // error handling
+           //   System.out.println("ERROR 400 - Bad Request.");
+           //}
 
         } else if (request.contains("github?")) {
           // pulls the query from the request and runs it with GitHub's REST API
@@ -238,6 +261,8 @@ class WebServer {
           // amehlhase, 46384989 -> memoranda
           // amehlhase, 46384989 -> ser316examples
           // amehlhase, 46384989 -> test316
+           
+           
 
         } else {
           // if the request is not recognized at all
